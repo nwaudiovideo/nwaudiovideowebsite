@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="icon" type="image/icon" href="images/logo.png" />
+    <meta name="author" content="Colton McGraw" />
+    <meta name="description" contents="Northwest Audio Video Official Website" />
+    <title>Northwest Audio Video</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet" />
+
+    <link href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="style.css?v=1" />
+</head>
+
+<body>
+    <div class="nw-nav-bar">
+        <a class="nw-nav-bar-item nw-menu nw-selectable"><i class="bx bx-menu" id="nw-side-bar-activator"></i></a>
+        <a class="nw-nav-bar-item nw-title">Northwest Audio Video</a>
+    </div>
+
+    <div class="nw-side-bar">
+        <div class="nw-side-bar-item nw-selectable">
+            <a>Home</a>
+        </div>
+    <!-- 
+        <div class="nw-side-bar-item nw-selectable">
+            <a>About</a>
+        </div>
+        <div class="nw-side-bar-item nw-selectable">
+            <a>Contact</a>
+        </div> 
+    -->
+    </div>
+
+    <div class="nw-main-container">
+        <div style="background-color:black; justify-items: center;">
+            <img src="images/Logo.gif" style="width:100%;" />
+        </div>
+
+        <div class="nw-message-block">
+            <h3>Need Help?</h3>
+            <p style="width: 80%; margin-left: 10%">
+                Just bought a T.V. but are having trouble setting it up? Need a new
+                home theater but don't know where to start? Have a live event but no
+                one to do audio? Want to set a mood in your business with music but
+                don't have a sound system? Just contact me <a href="" style="text-decoration: none; color: #360000">here</a> to learn more
+                or get a quote!
+            </p>
+        </div>
+
+        <div class="nw-slideshow">
+            <i class="bx bx-left-arrow"  id="nw-sidehow-left-btn"   onclick="advanceSlides(-1)"></i>
+            <i class="bx bx-right-arrow" id="nw-sidehow-right-btn"  onclick="advanceSlides(-1)"></i>
+
+            <div class="nw-slideshow-slide container">
+                <img class="nw-slideshow-content-image" src="images/Logo.png">
+                <h3 class="nw-slideshow-content-text">Why Did I Start This Business?</h3>
+            </div>
+            <div class="nw-slideshow-slide container">
+                <img class="nw-slideshow-content-image" src="images/Logo.gif" style="transform: translate(-7.5%, 0%);">
+                <p class="nw-slideshow-content-text" style="top:25%;">
+                    Audio and video has always been a passionate hobby of mine
+                    even since I was little. I remember playing with my keyboard
+                    and tinkering with movie-makers and aways enthroled to see
+                    fancy production equipment. Year later now, the thrill still
+                    hasn't worn off. Whether its seeing a new camera, mixer, or 
+                    amp. I'm always happy to learn and try something new.But why 
+                    trust me?
+                </p>
+            </div>
+            <div class="nw-slideshow-slide container">
+                <img class="nw-slideshow-content-image" src="images/Logo.gif" style="transform: translate(-7.5%, 0%);">
+                <p class="nw-slideshow-content-text" style="top:30%;">
+                    I have built home theaters for myself. I have studied audio
+                    and video inorder to understand the hardware and the physics
+                     of sound and light. I have done everything from live streaming
+                     events to setting up home theaters and car audio.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <footer></footer>
+</body>
+
+<script src="js/menu.js?v=1"></script>
+<script src="js/slideshow.js?v=1"></script>
+
+</html>

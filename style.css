@@ -1,0 +1,241 @@
+:root {
+  --p-bg-color: rgb(255, 255, 255);
+  --s-bg-color: rgb(49, 49, 49);
+  --p-color: rgb(150, 50, 50);
+  --s-color: rgb(56, 0, 0);
+
+  --context-size: 1.5rem;
+  --menu-size: 3rem;
+}
+
+* {
+  font-family: "Raleway", sans-serif;
+  color: var(--p-color);
+  font-size: var(--context-size);
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: auto;
+
+  background-color: var(--p-bg-color);
+
+  margin: 0;
+  padding: 0;
+  margin-top: var(--menu-size);
+  
+  overflow: overlay;
+}
+
+.container {
+  position: relative;
+  text-align: center;
+}
+
+/*-----------------Nav Bar-----------------*/
+
+/*Bar*/
+.nw-nav-bar {
+  position: fixed;
+  left: 0;
+  top: 0rem;
+
+  width: 100%;
+  height: var(--menu-size);
+
+  margin: 0;
+  padding: 0;
+
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+
+  background-color: var(--s-bg-color);
+
+  z-index: 5;
+}
+
+/*Item*/
+.nw-nav-bar-item {
+  display: inline-block;
+  width: auto;
+  margin: 0;
+  padding: 0;
+  align-self: center;
+}
+
+/*-----------------------------------------*/
+
+/*-----------------Side Bar-----------------*/
+
+/*Bar*/
+.nw-side-bar {
+  display: none;
+  z-index: 5;
+}
+.nw-side-bar.open {
+  position: fixed;
+  left: 0;
+  top: var(--menu-size);
+
+  width: 8rem;
+  height: calc(100vh - var(--menu-size));
+
+  margin: 0;
+  padding: 0;
+
+  display: inline-flex;
+  flex-direction: column;
+
+  background-color: var(--s-bg-color);
+}
+
+/*Item*/
+.nw-side-bar-item {
+  display: inline-flex;
+  width: 100%;
+  height: 1.75rem;
+  margin: 0;
+  justify-content: space-evenly;
+  user-select: none;
+}
+
+#nw-side-bar-activator {
+  margin: 0;
+  padding: 0;
+}
+
+/*-----------------------------------------*/
+
+
+/*-----------------Slideshow-----------------*/
+.nw-slideshow{
+  position: relative;
+  background-color: black;
+  height: 20rem;
+}
+.nw-slideshow-slide{
+  display: none;
+  width:auto;
+  height:inherit;
+  overflow: hidden;
+  justify-content: center;
+}
+
+.nw-slideshow-content-image{
+  height: inherit;
+  margin: auto;
+}
+.nw-slideshow-content-text{
+  position: absolute;
+  font-size: 1rem;
+  top:40%;
+  left:10%;
+  text-align: center;
+  width:80%;
+  align-content: center;
+
+  background-color: rgba(56, 0, 0, 0.4);
+}
+
+.nw-paralax{
+  /* Set a specific height */
+  min-height: 500px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#nw-sidehow-left-btn,
+#nw-sidehow-right-btn{
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: var(--p-color);
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+  z-index: 1;
+}
+
+#nw-sidehow-right-btn {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/*-------------------------------------------*/
+.nw-icon {
+  width: var(--context-size);
+  height: var(--context-size);
+}
+
+.nw-title {
+  text-align: center;
+  text-decoration: none;
+  text-rendering: optimizeLegibility;
+  user-select: none;
+  width: 100%;
+}
+
+.nw-menu {
+  margin: var(--context-size);
+  width: var(--context-size);
+  height: var(--context-size);
+}
+
+.nw-message-block {
+  display: block;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.nw-selectable:hover {
+  background-color: rgb(54, 0, 0);
+  border-radius: 5px;
+}
+
+/*----------------------Browser settings------------------*/
+
+/*Scrollbar settings*/
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-button,
+::-webkit-scrollbar-corner,
+::-webkit-scrollbar-track {
+  opacity: 0.0;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--s-color);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--p-color);
+}
+/*-------------------*/
+
+/*----------------------Browser settings------------------*/
+
+
+@media (max-width: 640px) {
+
+}
