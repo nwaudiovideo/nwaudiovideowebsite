@@ -1,0 +1,97 @@
+@import url('common.css');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: 'Arial', sans-serif;
+}
+
+body{
+    background-color: var(--background-color);
+
+    margin: 0 5% 0 5%;
+}
+
+main {
+    background-color: var(--color-background-light);
+}
+
+.container {
+    display:block;
+
+    justify-content: center;
+}
+
+.main {
+    display: block;
+
+    width:auto;
+    height: 100vh;
+
+    background-image: url('https://www.nwaudiovideo.com/assets/speaker_on_table.png');
+    background-size:cover;
+
+    background-position: calc(100vh / 100vw);
+    
+}
+
+.main .main-container {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+.logo {
+    display:block;
+
+    width: 100%;
+    height: calc(100vw / 3);
+
+    overflow: hidden;
+
+}
+
+.logo img {
+    width: 100%;
+
+    position:relative;
+
+    top: -75%;
+}
+
+.message {
+    display:flex;
+    width: 100%;
+    height: 15rem;
+}
+
+.message h1 {
+    text-transform: capitalize;
+    align-self: center;
+    color: #aaa;
+}
+
+.contact{
+    display: flex;
+    flex-direction: column;
+    font-size: larger;
+}
+
+.contact a {
+    text-decoration: none;
+    color: #aaa;
+
+    justify-self: center;
+    align-self: center;
+
+    margin-top: 2px;
+}
+
+.contact a i::before {
+    position: relative;
+    top: 4px;
+}
