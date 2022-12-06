@@ -1,50 +1,292 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <meta name="author" content="Colton McGraw" />
 
-    <meta name="description" contents="Northwest Audio Video Official Website" />
-    <meta name="keywords" content="Audio, Video, A/V, Northwest, Security, Car, Car Audio">
+    <meta
+      name="description"
+      contents="Northwest Audio Video Official Website"
+    />
+    <meta
+      name="keywords"
+      content="Audio, Video, A/V, Northwest, Security, Car, Car Audio"
+    />
 
     <meta name="google" content="nositelinkssearchbox" />
-    <meta name="google-site-verification" content="uxoqkr12By1hvED4IGf6jBzjInp3fC6m_z7OUr1EDlw" />
-    
-    <title>Coming Soon!</title>
-    
-    <link rel="apple-touch-icon" sizes="180x180" href="https://www.nwaudiovideo.com/assets/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="https://www.nwaudiovideo.com/assets/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="https://www.nwaudiovideo.com/assets/favicon-16x16.png">
-    <link rel="manifest" href="https://www.nwaudiovideo.com/assets/site.webmanifest">
+    <meta
+      name="google-site-verification"
+      content="uxoqkr12By1hvED4IGf6jBzjInp3fC6m_z7OUr1EDlw"
+    />
 
+    <title>Coming Soon!</title>
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="https://www.nwaudiovideo.com/assets/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="https://www.nwaudiovideo.com/assets/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="https://www.nwaudiovideo.com/assets/favicon-16x16.png"
+    />
+    <!--
+    <link
+      rel="manifest"
+      href="https://www.nwaudiovideo.com/assets/site.webmanifest"
+    />
+-->
     <link rel="preconnect" href="https://unpkg.com/" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    
-    <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
-    
-    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
-    <link href="style/construction.css?v=2" rel="stylesheet">
 
-</head>
-<body>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 
-<div class="main">
-<div class="main-container" style="background-color: #2f2f2f9e; height:100%;">
-    <div class="container logo">
+    <link href="style/welcome.css?v=2" rel="stylesheet" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("a").on("click", function (event) {
+          if (this.hash !== "") {
+            event.preventDefault();
+
+            var hash = this.hash;
+            $("html, body").animate(
+              {
+                scrollTop: $(hash).offset().top,
+              },
+              800,
+              function () {
+                window.location.hash = hash;
+              }
+            );
+          }
+        });
+      });
+
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+    </script>
+  </head>
+
+  <!------------------------- HEAD ^ -------------------------->
+  <!----------------------------------------------------------->
+  <!------------------------- BODY V -------------------------->
+
+  <body>
+    <!---------------------- QUICK-LINK ----------------------->
+    <div id="quick-actions">
+      <a href="mailto:business@nwaudiovideo.com" id="email-me"
+        ><i class="bx bxs-envelope"></i
+      ></a>
+      <a href="tel:4068854404" id="call-me"> <i class="bx bxs-phone"></i></a>
+      <a href="" onclick="topFunction()" id="topBtn">
+        <i class="bx bxs-chevron-up"></i
+      ></a>
     </div>
-    <div class="container message">
-        <h1 style="cursor:default;">Coming Soon</h1>
+
+    <div id="content">
+      <!------------------------- HERO -------------------------->
+      <div class="content-section">
+        <div id="hero" class="container">
+          <img src="images/NWAV-Dark (2).png" />
+          <hr />
+          <div class="container">
+            <p>
+              If you need audio, video, or security, we provide it!<br />Check
+              below to see our complete list of services.
+            </p>
+            <a href="#cards">SEE MORE</a>
+          </div>
+        </div>
+      </div>
+
+      <!------------------------- CARDS -------------------------->
+      <div id="cards" class="content-section">
+        <div id="cards-container" class="container">
+          <div id="security-card" class="card">
+            <img src="images/pin_pad.jpg" />
+            <h3>SECURITY</h3>
+            <a href="#security">LEARN MORE</a>
+          </div>
+          <div id="audio-card" class="card">
+            <img src="images/speakers.png" />
+            <h3>AUDIO</h3>
+            <a href="#audio">LEARN MORE</a>
+          </div>
+          <div id="video-card" class="card">
+            <img src="images/live.jpg" />
+            <h3>VIDEO</h3>
+            <a href="#video">LEARN MORE</a>
+          </div>
+        </div>
+      </div>
+
+      <!------------------------- FEATURE -------------------------->
+      <div class="content-section">
+        <div id="featured" class="">
+          <h3>FEATURED</h3>
+          <br />
+          <img src="images/Live-full.jpg" width="100%" />
+          <p>
+            Finishing setting up for a wedding live stream to over 100
+            connections!
+          </p>
+        </div>
+      </div>
+
+      <!------------------------- TestimonialS -------------------------->
+      <div class="content-section">
+        <div id="testimonials" class="container">
+          <div id="theader">
+            <h3>WHAT DO OUR CUSTOMERS SAY?</h3>
+            <hr style="width: 100%; align-self: center" />
+          </div>
+          <div class="testimonial left">
+            <div class="container">
+              <h3>Bailey McGraw</h3>
+            </div>
+            <p>
+              "I definitely recommend Colton's services! He took care of all the
+              audio and video for my husband's and my wedding. We couldn't have
+              done it without him. Everything went flawlessly, and we had many
+              compliments from our guests on how good of a job he did. He goes
+              above and beyond for his customers, and I will definitely use him
+              for future events!"
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!------------------------- Security -------------------------->
+
+      <div id="security" class="content-section">
+        <div class="security-section">
+          <h3>SECURITY</h3>
+          <hr />
+          <p>
+            Security systems are a great way to have peace of mind in many
+            different situations. Here's a little more about them and how we
+            install them.
+          </p>
+
+          <div class="container">
+            <div>
+              <p>
+                We communicate with you to understand what your situation is,
+                what your looking for, and what features you would like. Then,
+                we do the shopping for you. We'll present you with a quote
+                listing what you are getting. If you agree to the quote, we
+                order it! Then install the system at a time convient for you.
+              </p>
+
+              <p>
+                While security systems ussually are used as a deterent they have
+                many other use cases, such as keeping tabs on an aging parent.
+                Do you think a system could benifit you? If so click the link
+                below to get started filling out a form!
+              </p>
+            </div>
+            <img
+              width="4000"
+              height="2667"
+              src="https://images.pexels.com/photos/5966513/pexels-photo-5966513.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            />
+          </div>
+          <a href="survey-security/">GET STARTED</a>
+        </div>
+      </div>
+
+      <!------------------------- Audio -------------------------->
+
+      <div id="audio" class="content-section">
+        <div class="audio-section">
+          <h3>AUDIO</h3>
+          <hr />
+          <p>
+            Audio systems have found there way into many areas of our life. But
+            the most often we have them in our homes and cars. Here's a little
+            more information about audio systems and why their important.
+          </p>
+
+          <div class="container">
+            <div>
+              <p>
+                <b>Car</b> infotainment system have come a long way in the last
+                few decades. However, is what your getting from the manufacturer
+                the best? Often, no. Why does that matter? Poorly layed out
+                menus and distracting infotainment systems can contribute to
+                driving distracted. A well layout infotainment system can reduce
+                that amount of discration while driving!
+              </p>
+              <p>
+                <b>Home</b> infotainment centers and central audio can be a
+                major headache. How do you know what equipment will work well
+                together if at all? We listen to your need and wants to help
+                provide you with system that will deliver!
+              </p>
+
+              <p>
+                No matter where your listening, good equipment can help you
+                greatly! Poor quality audio means that you're missing out on
+                whats happing! Poor audio can also contribute to hearing loss
+                since often, we turn it up louder to hear better. A well balence
+                audio system means that you can hear everything in the audio
+                even at low volumes!
+              </p>
+            </div>
+            <img src="images/speakers.png" />
+          </div>
+          <a href="https://nwaudiovideo.com/404">GET STARTED</a>
+        </div>
+      </div>
+
+      <!------------------------- Video -------------------------->
+
+      <div id="video" class="content-section">
+        <div class="video-section">
+          <h3>VIDEO</h3>
+          <hr />
+          <p>
+            Memorable events are important to capture! Its even better when
+            others can enjoy your moments with you!
+          </p>
+
+          <div class="container">
+            <div>
+              <p>
+                At times we can help broadcast your event live! Weather its your
+                big day, or another important event, we provide the resources
+                and people needed to get your event to everyone who needs to see
+                it! And ensure that it's captured for the future.
+              </p>
+            </div>
+            <img src="images/Live-full.jpg" />
+          </div>
+          <a href="survey-event/">GET STARTED</a>
+        </div>
+      </div>
+
+      <!------------------------------------------------------------->
     </div>
-    <div class="container contact">
-        <a href="tel:4068854404"><i class='bx bxs-phone'></i> - (406) 885 4404</a>
-        <a href="mailto:business@nwaudiovideo.com"><i class='bx bx-envelope'></i> - business@nwaudiovideo.com</a>
-    </div>
-</div>
-</div>
-    
-</body>
+    <br />
+  </body>
 </html>

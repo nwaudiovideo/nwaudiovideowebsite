@@ -1,78 +1,221 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap");
 
-:root{
-    --primary-color: rgb(100, 25, 25);
-    --background-color: rgb(60, 60, 60);
+:root {
+  --primary-color: rgb(255, 114, 53);
+  --secondary-color: rgb(61, 213, 255);
 
-    --color-text-primary: #000000;
-    --color-text-secondary: #6d6d6d;
-    --color-text-highlight: #ff6767;
+  --background-color: linear-gradient(
+    to bottom right,
+    var(--primary-color),
+    var(--secondary-color)
+  );
 
-    --color-background-light: #ffffff;
+  --button-color: rgb(62, 62, 62);
+
+  --hero-color: rgba(0, 0, 0, 0.468);
+
+  --color-text-primary: #ffffff;
+
+  --color-background-light: #ffffff;
 }
 
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
+
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 html {
-    font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
 }
 
-body{
-    background-color: var(--background-color);
+body {
+  background: var(--background-color);
+  background-attachment: fixed;
+
+  height: 100vh;
+  width: 80vw;
+
+  max-width: 1500px;
+
+  overflow-x: hidden;
+
+  color: var(--color-text-primary);
+
+  margin: auto;
+
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 .container {
-    display: flex;
+  display: flex;
 
-    flex-wrap: nowrap;
-    flex-direction: row;
+  flex-wrap: nowrap;
+  flex-direction: row;
 
+  width: 100%;
+
+  justify-content: center;
+  align-content: center;
+}
+
+#quick-actions {
+  display: flex;
+
+  flex-direction: column;
+
+  position: fixed;
+
+  right: 1%;
+  bottom: 0rem;
+
+  width: auto;
+  height: min-content;
+
+  margin: 1rem 0;
+
+  z-index: 99;
+}
+
+#topBtn {
+  width: 1.25rem;
+  height: 1.25rem;
+
+  padding: 1.25rem 1.25rem;
+
+  border-radius: 2rem;
+
+  justify-content: center;
+  align-content: center;
+
+  background-color: var(--button-color);
+
+  z-index: 99;
+}
+
+#call-me {
+  width: 1.25rem;
+  height: 1.25rem;
+
+  margin: 6px 0;
+  padding: 1.25rem;
+
+  border-radius: 2rem;
+
+  justify-content: center;
+  align-content: center;
+
+  background-color: var(--button-color);
+
+  z-index: 99;
+}
+
+#email-me {
+  width: 1.25rem;
+  height: 1.25rem;
+
+  padding: 1.25rem;
+
+  border-radius: 2rem;
+
+  justify-content: center;
+  align-content: center;
+
+  background-color: var(--button-color);
+
+  z-index: 99;
+}
+
+#topBtn i {
+  position: relative;
+  font-size: x-large;
+  text-align: center;
+  left: -1px;
+  top: -2px;
+  color: var(--color-text-primary);
+}
+
+#call-me i {
+  position: relative;
+  font-size: x-large;
+  text-align: center;
+  left: -1px;
+  top: -2px;
+  color: var(--color-text-primary);
+}
+#email-me i {
+  position: relative;
+  font-size: x-large;
+  text-align: center;
+  left: -1px;
+  top: -2px;
+  color: var(--color-text-primary);
+}
+
+a {
+  text-decoration: none;
+  text-align: center;
+  color: var(--color-text-primary);
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+hr {
+  height: 2px;
+  background-color: var(--color-text-primary);
+  border: none;
+}
+
+#content {
+}
+
+.content-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+@media only screen and (min-width: 0px) and (max-width: 500px) {
+  #nav {
+    height: fit-content;
+  }
+  #logo {
     width: 100%;
-
-    justify-content: center;
-    align-content: center;
+    height: 5rem;
+    background-image: url("../images/NWAV-Dark\ \(2\).png");
+    background-size: contain;
+    background-position: 5% 0%;
+    background-repeat: no-repeat;
+  }
 }
 
-.button{
-    display: flex;
 
-    margin: auto 1rem auto 1rem;
-    padding: 0 1rem 0 1rem;
+
+@media screen and (prefers-color-scheme: dark) {
     
-    border-radius: var(--button-crop-radius);
+    a 
+    {  
+    -webkit-filter: invert(100%); /* Safari/Chrome */
+    filter: invert(100%);
+    }
     
-    color: var(--color-text-primary);
-    background-color: var(--button-color);
-
-    justify-content: center;
-    align-items: center;
-
-    text-transform: capitalize;
-    text-align: center;
-    text-decoration: none;
-}
-
-.inline-button{
-    padding-left: 2pt;
-    padding-right: 1pt;
+    p
+    {  
+    -webkit-filter: invert(100%); /* Safari/Chrome */
+    filter: invert(100%);
+    }
     
-    border-radius: 5pt;
-    
-    color: var(--color-text-primary);
-    background-color: var(--button-color);
-
-    text-decoration: none;
-}
-
-img {
-    width: auto;
-    height: auto;
-}
-
-a{
-    text-decoration: none;
-    color: var(--color-text-primary);
-}
+    h3 
+    {  
+    -webkit-filter: invert(100%); /* Safari/Chrome */
+    filter: invert(100%);
+    }
+  
+  }
